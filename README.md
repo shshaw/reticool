@@ -12,4 +12,4 @@
 
 ## License
 
-Reticool is released under [MIT License](./blob/master/LICENSE)
+Reticool is released under [MIT License](./LICENSE)
