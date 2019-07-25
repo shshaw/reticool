@@ -9,3 +9,7 @@
 </div>
 
 > Not ready for use
+
+## License
+
+Reticool is released under [MIT License](./blob/master/LICENSE)
