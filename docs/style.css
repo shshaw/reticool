@@ -1,0 +1,129 @@
+@font-face {
+  font-family: 'Exo';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Exo Light'), local('Exo-Light'), url(https://fonts.gstatic.com/s/exo/v9/4UaDrEtFpBIa2Fy29xLm.ttf) format('truetype');
+}
+/* ////////////////////////////////////////////////////////////////////////// */
+.intro {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.reticool-logo {
+  display: block;
+  width: 80%;
+  height: auto;
+  margin: 2em auto 0;
+}
+.readable {
+  color: #FFF;
+}
+.options,
+.options li {
+list-style-type: none;
+  padding: 0;
+}
+.options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em 0;
+}
+.dash {
+  display: block;
+  width: 39px;
+  border: dotted 1px #FFF;
+  opacity: 0.8;
+  margin: 5px;
+}
+.dot {
+  display: block;
+  opacity: 1;
+  width: 2em;
+  height: 2em;
+  /*   background: #FFF; */
+  border-radius: 50%;
+  transition: all 0.3s cubic-bezier(0.49, 0.03, 0.14, 0.97);
+  cursor: pointer;
+  font-size: 16px;
+  color: #F38181;
+  border: solid 2px #F38181;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+.button {
+  display: block;
+  -webkit-appearance: none;
+  border: solid 2px #F38181;
+  color: #F38181;
+  border-radius: 1.5em;
+  padding: 0.5em 2em;
+  background: none;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+  margin: 0 auto;
+  font: inherit;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+}
+.dot:before,
+.button:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: #F38181;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  transition: -webkit-transform 0.3s cubic-bezier(0.49, 0.03, 0.14, 0.97);
+  transition: transform 0.3s cubic-bezier(0.49, 0.03, 0.14, 0.97);
+  transition: transform 0.3s cubic-bezier(0.49, 0.03, 0.14, 0.97), -webkit-transform 0.3s cubic-bezier(0.49, 0.03, 0.14, 0.97);
+}
+.dot:hover,
+.button:hover {
+  color: #18587A;
+}
+.dot:hover:before,
+.button:hover:before {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+/* ////////////////////////////////////////////////////////////////////////// */
+* {
+  box-sizing: border-box;
+}
+a {
+  color: #F38181;
+}
+a:hover {
+  color: #fac7c7;
+}
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  width: 90%;
+  max-width: 28em;
+  margin: auto;
+  background: #18587A;
+  color: #2586ba;
+  font-size: 16px;
+  font-family: 'Exo', sans-serif;
+  font-weight: 300;
+}
+  
