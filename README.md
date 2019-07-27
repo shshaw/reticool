@@ -8,7 +8,7 @@
 
 </div>
 
-**Demo:** [https://shshaw.github.io/reticool/]
+**Demo:** https://shshaw.github.io/reticool/
 
 ## Installation
 
@@ -28,11 +28,11 @@ Uncompiled (for development environments)
 
 #### Using NPM
 ```
-npm i reticool.js
+npm i reticool
 ```
 
 ```js
-import RETICOOL from 'reticool.js';
+import RETICOOL from 'reticool';
 
 new RETICOOL();
 ```
