@@ -4,7 +4,9 @@
   "description": "Chase the cursor with style",
   "main": "reticool.js",
   "scripts": {
-    "test": "mocha"
+    "postinstall": "npm i -g rollup",
+    "test": "mocha",
+    "build": "rollup --config rollup.config.js"
   },
   "repository": {
     "type": "git",
@@ -15,10 +17,15 @@
     "interaction"
   ],
   "author": "Stephen Shaw",
-  "contributors": ["Joseph Rex (https://josephrex.me)"],
+  "contributors": [
+    "Joseph Rex (https://josephrex.me)"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/shshaw/reticool/issues"
   },
-  "homepage": "https://github.com/shshaw/reticool#readme"
+  "homepage": "https://github.com/shshaw/reticool#readme",
+  "devDependencies": {
+    "rollup-plugin-terser": "^5.1.1"
+  }
 }
