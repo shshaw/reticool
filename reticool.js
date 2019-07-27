@@ -75,6 +75,7 @@
     };
 
     this.config = Object.assign({}, defaultConfig, opts);
+    this.opts = opts;
 
     this.x = this.lx = this._x = this.x || window.innerWidth/ 2;
     this.y = this.ly = this._y = this.y || window.innerHeight/ 2;
@@ -144,10 +145,10 @@
 
       this.$c = document.createElement('div');
       this.$c.className = 'RETICOOL__circle';
-      this.$c.style.width = this.config.radius + 'px';
-      this.$c.style.height = this.config.radius + 'px';
-      this.$c.style.borderRadius = this.config.radius + 'px';
-      this.$c.style.borderWidth = this.config.borderWidth + 'px';
+      this.$c.style.width = `${this.config.radius}px`;
+      this.$c.style.height = `${this.config.radius}px`;
+      this.$c.style.borderRadius = `${this.config.radius}px`;
+      this.$c.style.borderWidth = `${this.config.borderWidth}px`;
 
       this.$i = document.createElement('div');
       this.$i.className = 'RETICOOL__inner';
@@ -184,7 +185,9 @@
       document[action]('touchstart',this.onMove);
       document[action]('touchmove',this.onMove);
       document[action]('touchend',this.onMove);
-      document[action]('keydown', this.changeSymbol);
+      if(!this.opts.content) {
+        document[action]('keydown', this.changeSymbol);
+      }
 
       document.documentElement[action]('mousedown',this.onDown);
       document.documentElement[action]('touchstart',this.onDown);
@@ -299,12 +302,10 @@
         + " rotate( calc( var(--rotation) * 1rad) )"
         + " scaleX( calc( var(--vx)/2 + var(--vy)/2 + 1 ) )";
 
-      this.$c.style.width = "calc( var(--width) * 1px )";
-      this.$c.style.height = "calc( var(--height) * 1px )";
+      this.$c.style.width = 'calc( var(--width) * 1px )';
+      this.$c.style.height = 'calc( var(--height) * 1px )';
 
-      this.$i.style.transform = 'translate(-50%, -50%)'
-      //+ ' translate( calc( var(--dx) * 3% ), calc( var(--dy) * 3% ) )'
-        +  ' rotate(calc( var(--rotation) * -1rad) ';
+      this.$i.style.transform = 'translate(-50%, -50%) rotate(calc( var(--rotation) * -1rad) ';
 
       this.onUpdate = this.updateCSSVars;
     },
@@ -332,10 +333,10 @@
         + ' rotate(' + this.rotation + 'rad)'
         + ' scaleX(' + ( this.vx/2 + this.vy/2 + 1) + ')';
 
-      this.$i.style.transform = 'translate(-50%, -50%) rotate(' + -this.rotation + 'rad)';
+      this.$i.style.transform = `translate(-50%, -50%) rotate(${-this.rotation}rad)`;
 
-      this.$c.style.width = this.width + 'px';
-      this.$c.style.height = this.height + 'px';
+      this.$c.style.width = `${this.width}px`;
+      this.$c.style.height = `${this.height}px`;
 
     },
 

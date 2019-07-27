@@ -112,6 +112,9 @@ const config = {
 new RETICOOL(config);
 ```
 
+You can rotate through multiple inner cursor content/symbol by hitting any key on the keyboard.
+To disable this behavior, add a custom `content` property to the config of your RETICOOL instance.
+
 ## License
 
 Reticool is released under [MIT License](./LICENSE)
