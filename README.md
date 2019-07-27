@@ -17,13 +17,13 @@
 Minified
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/shshaw/reticool/reticool.min.js"></script>
+<script src="https://unpkg.com/reticool@latest/reticool.min.js"></script>
 ```
 
 Uncompiled (for development environments)
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/shshaw/reticool/reticool.js"></script>
+<script src="https://unpkg.com/reticool@latest/reticool.js"></script>
 ```
 
 #### Using NPM
