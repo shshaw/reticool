@@ -5,7 +5,7 @@
 }(this, function () {
 
   // Styles injected into the <head> when a RETICOOL is created.
-  var styles = '<style>.RETICOOL{position:fixed;top: 0;left:0;pointer-events:none;will-change:transform;transition: color 0.3s linear,opacity 0.3s linear;font-size: 20px;line-height:1;white-space:nowrap;} .RETICOOL__inner{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);} .RETICOOL__circle{border-style:solid;}</style>';
+  var styles = '<style>.RETICOOL{position:fixed;top: 0;left:0;pointer-events:none;will-change:transform;transition: color 0.3s linear,opacity 0.3s linear;font-size: 20px;line-height:1;white-space:nowrap;z-index:9999999} .RETICOOL__inner{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);} .RETICOOL__circle{border-style:solid;}</style>';
 
 
   // Rule out Firefox, even though it technically supports CSSvars.
