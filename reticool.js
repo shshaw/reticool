@@ -12,7 +12,7 @@
   var cssVarSupport = CSS && CSS.supports && CSS.supports('transform', 'rotate(calc(1*1rad))');
 
 
-  function RETICOOL(opts) {
+  function RETICOOL(opts = {}) {
     if (!(this instanceof RETICOOL)) { return new RETICOOL(opts); }
 
     const defaultConfig = {
