@@ -1,6 +1,6 @@
 {
   "name": "reticool",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Chase the cursor with style",
   "main": "reticool.js",
   "scripts": {
